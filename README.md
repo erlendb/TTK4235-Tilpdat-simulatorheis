@@ -1,7 +1,7 @@
 Med denne greia kan du bruke heissimulatoren fra TTK4145 (https://github.com/TTK4145/Simulator-v2) på tilpdatheisen.
 Bygger på driveren fra TTK4145  (https://github.com/TTK4145/driver-c)
 
-1) Last ned simulatoren (Windows: SimElevatorServer.exe fra https://github.com/TTK4145/Simulator-v2/releases/tag/v1.5)
+1) Last ned simulatoren (SimElevatorServer.exe (Windows) eller SimElevatorServer (Linux) fra https://github.com/TTK4145/Simulator-v2/releases/tag/v1.5)
 2) Last ned elev.h og elev.c herfra
 3) Lagre de gamle elev.c og elev.h i heisprogrammet ditt et lurt sted og bruk de du lastet ned herfra istedenfor.
 
