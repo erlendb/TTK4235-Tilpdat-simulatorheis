@@ -1,35 +1,37 @@
 # Simulator for tilpdat-heislab
 
-Med denne greia kan du teste heiskoden din i simulator, så du slipper å sitte på sal med den fysiske heisen.
+Heissimulator og kode for å kjøre din egen heis i simulator. For heislab i TTK4235 Tilpassede datasystemer.
 
-Testet og funker på Linux. Kan ikke garantere noe på Windows.
+Med denne greia kan du altså teste heiskoden din i simulator, så du slipper å sitte på sal med den fysiske heisen.
+
+Testet og funker på Linux. Kan ikke garantere noe på Windows. Alt som står her er beregnet på Linux.
 
 ## Hvordan bruke simulatoren
-1. Last ned simulatoren (Linux: SimElevatorServer. Windows: SimElevatorServer.exe)
+1. Last ned simulatoren (Linux: [*SimElevatorServer*](https://github.com/erlendb/TTK4235-tilpdat-simulatorheis/raw/master/SimElevatorServer). Windows: [*SimElevatorServer.exe*](https://github.com/erlendb/TTK4235-tilpdat-simulatorheis/raw/master/SimElevatorServer.exe))
 
-2. Åpne terminalen i mappen der du lagret SimElevatorServer. Kjør kommandoen `chmod +x SimElevatorServer` for å gjøre det mulig å kjøre simulatoren som et program. Dette trenger du bare å gjøre én gang.
+2. Åpne terminalen i mappen der du lagret *SimElevatorServer*. Kjør kommandoen `chmod +x SimElevatorServer` for å gjøre det mulig å kjøre simulatoren som et program. Dette trenger du bare å gjøre én gang.
 
 3. Kjør kommandoen `./SimElevatorServer` i terminalen for å starte simulatoren.
 
-4. Last ned elev.h og elev.c. Disse filene må du bruke i heisprogrammet ditt istedenfor de gamle elev.h og elev.c som du hadde fra før.
+4. Last ned [*elev.h*](https://github.com/erlendb/TTK4235-tilpdat-simulatorheis/blob/master/elev.h) og [*elev.c*](https://github.com/erlendb/TTK4235-tilpdat-simulatorheis/blob/master/elev.c). Disse filene må du bruke i heisprogrammet ditt istedenfor de gamle *elev.h* og *elev.c* som du hadde fra før.
 
-5. Kompiler heisprogrammet ditt (`make`) med de nye filene og kjør det (`./heis`). Hvis heisprogrammet kjører som det skal og alt funker, så skal det nå stå "Connected" i simulatorvinduet. Bruk tastene qwe, sdf og zxcv for å "trykke" på bestillingsknappene i heisen.
+5. Kompiler heisprogrammet ditt med de nye filene (`make`) og kjør det (`./heis`). Hvis heisprogrammet kjører som det skal og alt funker, så skal det nå stå "Connected" i simulatorvinduet. Bruk tastene **qwe, sdf og zxcv** på tastaturet for å "trykke" på bestillingsknappene i heisen.
 
 6. Wooho, kjør heis og vær glad.
 
 ## Hvordan bytte mellom simulator og heisen på sal
 
-For å kjøre heisen **i simulator** må det stå følgende øverst i både elev.c og elev.h:
+For å kjøre heisen **i simulator** må det stå følgende øverst i både *elev.c* og *elev.h*:
 ~~~c
 #define SIMULATOR
 ~~~
 
-For å kjøre heisen **på sal** må det stå følgende øverst i både elev.c og elev.h:
+For å kjøre heisen **på sal** må det stå følgende øverst i både *elev.c* og *elev.h*:
 ~~~c
 #define SAL
 ~~~
 
-`SIMULATOR` og `SAL` er to konstanter som kan defineres. Både elev.c og elev.h inneholder kode for både simulator og for sal. Hvilken av konstantene du definerer avgjør hvorvidt kode for simulator eller kode for sal blir kompilert (se etter `#ifdef SIMULATOR` og `#ifdef SAL` i elev.c og elev.h hvis du er nysgjerrig).
+`SIMULATOR` og `SAL` er to konstanter som kan defineres. Både *elev.c* og *elev.h* inneholder kode for både simulator og for sal. Hvilken av konstantene du definerer avgjør hvorvidt kode for simulator eller kode for sal blir kompilert (se etter `#ifdef SIMULATOR` og `#ifdef SAL` i *elev.c* og *elev.h* hvis du er nysgjerrig).
 
 ## Litt mer info om simulatoren
 
@@ -41,7 +43,7 @@ For å avslutte simulatoren kan du trykke `ctrl+c`.
 
 ## Litt mer info om driveren
 
-elev.c og elev.h er satt opp på følgende måte:
+*elev.c* og *elev.h* er satt opp på følgende måte:
 
 ~~~c
 #define SIMULATOR   // #define SIMULATOR hvis du skal kjøre heisen i simulator
@@ -70,4 +72,4 @@ Dette repoet tar utgangspunkt i simulatoren og driveren fra TTK4145:
 * https://github.com/TTK4145/Simulator-v2
 * https://github.com/TTK4145/driver-c
 
-SimElevatorServer og SimElevatorServer.exe som er lagt med i dette repoet er versjon v1.5 fra TTK4145/Simulator-v2.
+*SimElevatorServer* og *SimElevatorServer.exe* som er lagt med i dette repoet er versjon v1.5 fra TTK4145/Simulator-v2.
