@@ -1,5 +1,7 @@
 # Simulator for tilpdat-heislab
 
+**Denne er utdatert og funker dårlig i 2020. Sjekk ut Torjus sin greie: https://github.com/Torjusba/TTK4235-tilpdat-simulatorheis**
+
 Heissimulator og kode for å kjøre din egen heis i simulator. For heislab i TTK4235 Tilpassede datasystemer.
 
 Med denne greia kan du altså teste heiskoden din i simulator, så du slipper å sitte på sal med den fysiske heisen.
